@@ -1,0 +1,19 @@
+{
+  "name": "Visma PM",
+  "version": "0.1",
+  "description": "Enhanced Visma eEkonomi experience for project management.",
+  "background": {
+    "scripts": ["bg.js"],
+    "persistent": false
+  },
+  "icons": { "128": "icon.png" },
+  "permissions": [
+    "https://eatime.vismaonline.com/reports*"
+  ],
+  "content_scripts": [ {
+    "matches": ["https://eatime.vismaonline.com/reports*"],
+    "js": ["content.js"],
+    "all_frames": true
+  }],
+  "manifest_version": 2
+}
