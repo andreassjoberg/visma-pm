@@ -8,10 +8,10 @@
   },
   "icons": { "128": "icon.png" },
   "permissions": [
-    "https://eatime.vismaonline.com/reports*"
+    "https://eatime.vismaonline.com/*"
   ],
   "content_scripts": [ {
-    "matches": ["https://eatime.vismaonline.com/reports*"],
+    "matches": ["https://eatime.vismaonline.com/*"],
     "js": ["content.js"],
     "all_frames": true
   }],
