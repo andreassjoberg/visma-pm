@@ -44,8 +44,8 @@ function renderCustomers() {
 
 function renderDates() {
     // First day of month
-    let startDate = new Date();
-    startDate.setDate(1);
+    let today = new Date();
+    let startDate = new Date(today.getFullYear(), today.getMonth() - 1, 1);
 
     // Last day of current month
     let endDate = new Date(startDate.getFullYear(), startDate.getMonth() + 1, 0);
@@ -211,6 +211,7 @@ function addOwnSection() {
 
 function isRapporterPage() {
     let sections = document.body.getElementsByTagName("section");
+
     return (
         sections.length > 0 &&
         sections[0].children.length > 0 &&
