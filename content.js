@@ -220,12 +220,16 @@ function isRapporterPage() {
     );
 }
 
-function windowLoaded() {
+function loadIfRapporter() {
     if (!isRapporterPage()) return;
 
     while (!addOwnSection()) {}
 
     requestCustomersList();
+}
+
+function windowLoaded() {
+    setTimeout(loadIfRapporter, 2000);
 }
 
 window.addEventListener("load", windowLoaded, false);
